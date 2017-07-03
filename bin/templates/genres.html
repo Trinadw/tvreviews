@@ -1,12 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Genre</title>
+	<title>Genre</title>
+	<link href="/tvreview.css" rel="stylesheet"></link> 
 </head>
 <body>
-<div class="main">
+	<div class="main">
 		<h1>Television Show Genre's</h1>
-				<a th:each="currentgenre: ${genreAsCollection}" th:href="@{http://localhost:8080/onegenre/(id=${currentgenre.id})}"><div th:text="${currentgenre.title}" ></div></a>
-			</div>
+
+		<p>Welcome to Trina's Television Show Review page! This page will offer indepth reviews of some of the hottest shows to hit the airwaves. We take an interesting perspective on television shows, providing insight that you won't find elsewhere. Trina's reviews will help you to decide if a show is right for you.</p>
+
+		<h2>Current Show Genre's</h2>
+		<article class="genreList">
+			<a th:each="currentgenre: ${genreAsCollection}" th:href="@{http://localhost:8080/onegenre/(id=${currentgenre.id})}"><div th:text="${currentgenre.title}" ></div></a>
+		</article>
+	</div>
+	<div class="genreInfo">
+		<p> tic tac toe hope this does what I want it to.</p>
+		<p>this should be in another column</p>
+		<p>One more column for the road.</p>
+	</div>
+
+
+
+
 </body>
 </html>

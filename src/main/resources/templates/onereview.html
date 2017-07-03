@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-<link href="/css/reviews.css" rel="stylesheet"></link>
+<link href="/tvreview.css" rel="stylesheet"></link>
 	<title>Show Reviews</title>
 </head>
 <body>
 <h1>Trina's Television Reviews</h1>
 <!-- loads the review showing picture and info loaded into the map -->
-<img th:src="${onereview.imageUrl}"/>
+<img class= "showpic" th:src="${onereview.imageUrl}"/>
 <p th:text="'ID: ' +${onereview.id}"></p> 
 <p th:text="'Show: ' + ${onereview.title}"></p>
 <p th:text="'Genre: ' + ${onereview.Genre}"></p>
@@ -15,8 +15,10 @@
 <p th:text="'Date: ' + ${onereview.date}"></p>
 <p th:text="'Show Description: ' + ${onereview.synopsis}"></p>
 
-<a class = "backtomain" th:href="@{/genres(title=${genreAsCollection})}">Back to Trina's Television Show Reviews</a><a></a>
 
-<footer>Trina's Television Reviews</footer>
+<footer>
+<a class = "backtomain" th:href="@{/genres(title=${genreAsCollection})}">Back to Trina's Television Show Reviews</a>
+
+<p>Trina's Television Reviews</p></footer>
 </body>
 </html>

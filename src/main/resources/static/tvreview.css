@@ -1,0 +1,29 @@
+article.genreList{
+	display:flex;
+	background-color:white;
+	flex-direction: center;
+	justify-content: space-around;
+}
+
+body{
+	background-color: gray;
+}
+div.genreInfo{
+	display:flex;
+	flex-direction: center;
+	justify-content: space-around;
+}
+
+footer{
+	text-align: center;
+}
+h1{
+	text-align: center;
+	text-decoration-color: red;
+}
+
+img.showpic{
+	border:solid;
+	display: block;
+	margin: 0 auto;
+}
