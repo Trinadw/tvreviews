@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Genre</title>
+</head>
+<body>
+<div class="main">
+		<h1>Television Show Genre's</h1>
+				<a th:each="currentgenre: ${genreAsCollection}" th:href="@{http://localhost:8080/onegenre/(id=${currentgenre.id})}"><div th:text="${currentgenre.title}" ></div></a>
+			</div>
+</body>
+</html>
