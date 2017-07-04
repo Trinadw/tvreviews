@@ -1,29 +1,57 @@
-article.genreList{
-	display:flex;
-	background-color:white;
+article.genreList {
+	display: flex;
+	background-color: white;
 	flex-direction: center;
 	justify-content: space-around;
+	border: solid;
 }
 
-body{
+body {
 	background-color: gray;
 }
-div.genreInfo{
-	display:flex;
+
+div.genreInfo {
+	display: flex;
 	flex-direction: center;
 	justify-content: space-around;
 }
 
-footer{
+footer {
 	text-align: center;
-}
-h1{
-	text-align: center;
-	text-decoration-color: red;
 }
 
-img.showpic{
-	border:solid;
+h1 {
+	text-align: center;
+	text-color: red;
+}
+
+header {
+	/*background-image: url("/images/4979045088_29937cdfb1_o-tvwall.jpg");
+	background-size: 6080px 6060px;*/
+	background-repeat: no-repeat;
+	font-family: cursive;
+	font-size: 35px;
+	text-shadow: 3px 2px gray;
+	background-color: #d6d3ca;
+	
+}
+
+img.showpic {
+	border: solid;
 	display: block;
 	margin: 0 auto;
+}
+
+img.tvpic {
+	max-width: 100px;
+	height: 97px;
+	opacity: 0.5;
+	float: left;
+}
+
+img.tvpic2 {
+	max-width: 100px;
+	height: 97px;
+	opacity: 0.5;
+	float: right;
 }

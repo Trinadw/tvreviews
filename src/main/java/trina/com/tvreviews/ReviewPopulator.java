@@ -15,7 +15,7 @@ public class ReviewPopulator implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		Genre comedy = new Genre("comedy");
+		Genre comedy = new Genre("Comedy");
 		genreRepo.save(comedy);
 		Review review1 = new Review(comedy, "Arrested Development",
 				"Lorem ipsum dolor sit amet, audire vituperatoribus pro ad, at facilisi pertinax nam. Sea error dicunt consectetuer ei, vel pertinax rationibus cu, primis nostrud accusamus ea has. Pri ornatus iracundia ea, decore luptatum ea pri. Quidam legendos constituto ad quo, splendide gloriatur contentiones sit ad, minim impetus cum et. Viris nonumy principes vix ne, eu mea modus quodsi.\r\n"
@@ -53,7 +53,7 @@ public class ReviewPopulator implements CommandLineRunner {
 						+ "Mel prima laudem at. Sed ut quodsi prompta facilisis, cum ad congue iisque, sit veritus docendi maluisset et. Nam id semper efficiendi, justo salutatus concludaturque ex vel. Populo melius no usu, ut nam albucius vituperata. Dolore offendit erroribus ei vel.",
 				"/images/Webp.net-resizeimagekimmy2.jpg");
 		reviewRepo.save(review2);
-		Genre drama = new Genre("drama");
+		Genre drama = new Genre("Drama");
 		genreRepo.save(drama);
 		Review review3 = new Review(drama, "Scandal",
 				"Lorem ipsum dolor sit amet, audire vituperatoribus pro ad, at facilisi pertinax nam. Sea error dicunt consectetuer ei, vel pertinax rationibus cu, primis nostrud accusamus ea has. Pri ornatus iracundia ea, decore luptatum ea pri. Quidam legendos constituto ad quo, splendide gloriatur contentiones sit ad, minim impetus cum et. Viris nonumy principes vix ne, eu mea modus quodsi.\r\n"
@@ -73,7 +73,7 @@ public class ReviewPopulator implements CommandLineRunner {
 						+ "Mel prima laudem at. Sed ut quodsi prompta facilisis, cum ad congue iisque, sit veritus docendi maluisset et. Nam id semper efficiendi, justo salutatus concludaturque ex vel. Populo melius no usu, ut nam albucius vituperata. Dolore offendit erroribus ei vel.",
 				"/images/635902125679670664-1579496363_scandal2.png");
 		reviewRepo.save(review3);
-		Genre reality = new Genre("reality");
+		Genre reality = new Genre("Reality");
 		genreRepo.save(reality);
 		Review review4 = new Review(reality, "The Voice",
 				"Lorem ipsum dolor sit amet, audire vituperatoribus pro ad, at facilisi pertinax nam. Sea error dicunt consectetuer ei, vel pertinax rationibus cu, primis nostrud accusamus ea has. Pri ornatus iracundia ea, decore luptatum ea pri. Quidam legendos constituto ad quo, splendide gloriatur contentiones sit ad, minim impetus cum et. Viris nonumy principes vix ne, eu mea modus quodsi.\r\n"
