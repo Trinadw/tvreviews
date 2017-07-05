@@ -13,15 +13,16 @@ article.showList{
 }
 
 body {
-	/*background-image:
-		url(/images/stock-vector-theatre-concept-comedy-and-drama-masks-word-cloud-193851809.jpg);*/
+	
 	color: black;
+	
 
 }
+
 div.bottom{
 	background:#aeaeae;
+	border-top-style:dotted;
 }
-
 div.genreInfo {
 	column-count: 3;
 	/*display: flex;
@@ -46,7 +47,7 @@ div.main img{
     margin: auto;
 	width: 500px;
 	height: 300px;
-	border-radius: 50%;
+	
 	padding: 15px 0px;
 	
 }
@@ -66,14 +67,17 @@ header {
 	font-size: 35px;
 	text-shadow: 3px 2px gray;
 	background-color: #d6d3ca;
+
 }
 
 img.maskpic{
 	float: left;
+	padding: 20px;
 }
 
 img.showpic {
 	border: solid;
+	border-color:red;
 	display: block;
 	margin: 0 auto;
 	max-width: 900px;
