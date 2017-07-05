@@ -26,7 +26,7 @@ public class Genre {
 	public Genre(String title ) {
 		this.title = title;		
 	}
-	
+	//instance variable getters
 	public long getId() {
 		return id;
 	}

@@ -15,6 +15,7 @@ public class ReviewPopulator implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
+		//add genre and reviews
 		Genre comedy = new Genre("Comedy");
 		genreRepo.save(comedy);
 		Review review1 = new Review(comedy, "Arrested Development",
