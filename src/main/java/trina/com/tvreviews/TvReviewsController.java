@@ -9,27 +9,26 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class TvReviewsController {
-	@Controller
-	public class ReviewsController {
+	
 		@Resource
 		ReviewRepository reviewRepo;
 		
 		@Resource
 		GenreRepository genreRepo;
-//list the genres
+//list the genres-genres html
 		@RequestMapping("/genres")
 		public String fetchReviews(Model model) {
 			model.addAttribute("genreAsCollection", genreRepo.findAll());
 			return "genres";
 		}
-		// individual genre
+		// individual genre-onegenre html 
 		@RequestMapping("/onegenre")
 	    public String fetchOneGenre(@RequestParam(value="id") Long id, Model model) {
 	         model.addAttribute("onegenre", genreRepo.findOne(id));
 	         return "onegenre";
 	     }
 		
-		//review for the show
+		//review for the show-onereview html
 		@RequestMapping("/onereview")
 	    public String fetchOne(@RequestParam(value="id") Long id, Model model) {
 	         model.addAttribute("onereview", reviewRepo.findOne(id));
@@ -37,4 +36,4 @@ public class TvReviewsController {
 	     }
 		
 	}
-}
+
