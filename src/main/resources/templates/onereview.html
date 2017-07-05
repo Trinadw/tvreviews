@@ -1,16 +1,23 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+<div class="singlereview">
 <head>
 <link href="/tvreview.css" rel="stylesheet"></link>
 	<title>Show Reviews</title>
 </head>
+
 <body>
-<h1>Trina's Television Reviews</h1>
+<header>
+		<div id="nameHeading">
+			<h1><img class="tvpic" alt="television" src="/images/4567080040_0678bcb9ef_o.jpg"/>Trina's Television Show Reviews<img class="tvpic2" alt="television" src="/images/4567080040_0678bcb9ef_o.jpg"/></h1>
+		</div>
+	</header>
+
+<h2>Trina's Television Reviews</h2>
 <!-- loads the review showing picture and info loaded into the map -->
 <img class= "showpic" th:src="${onereview.imageUrl}"/>
 <p th:text="'ID: ' +${onereview.id}"></p> 
 <p th:text="'Show: ' + ${onereview.title}"></p>
-<p th:text="'Genre: ' + ${onereview.Genre}"></p>
 <p th:text="'Review: ' + ${onereview.content}"></p>
 <p th:text="'Date: ' + ${onereview.date}"></p>
 <p th:text="'Show Description: ' + ${onereview.synopsis}"></p>
@@ -20,5 +27,7 @@
 <a class = "backtomain" th:href="@{/genres(title=${genreAsCollection})}">Back to Trina's Television Show Reviews</a>
 
 <p>Trina's Television Reviews</p></footer>
+
 </body>
+</div>
 </html>

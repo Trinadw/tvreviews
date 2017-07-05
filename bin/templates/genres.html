@@ -1,33 +1,83 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Genre</title>
-	<link href="/tvreview.css" rel="stylesheet"></link> 
+<title>Genre</title>
+<link href="/tvreview.css" rel="stylesheet"></link>
 </head>
 <body>
 	<header>
 		<div id="nameHeading">
-			<h1><img class="tvpic" alt="television" src="/images/4567080040_0678bcb9ef_o.jpg"/>Trina's Television Show Reviews<img class="tvpic2" alt="television" src="/images/4567080040_0678bcb9ef_o.jpg"/></h1>
+			<h1>
+				<img class="tvpic" alt="television"
+					src="/images/4567080040_0678bcb9ef_o.jpg" />Trina's Television Show
+				Reviews<img class="tvpic2" alt="television"
+					src="/images/4567080040_0678bcb9ef_o.jpg" />
+			</h1>
 		</div>
 	</header>
-	<div class="main">
-		<h2>Television Reviews</h2>
+	<div class="mainclass">
 
-		<p>Welcome to Trina's Television Show Review page! This page will offer indepth reviews of some of the hottest shows to hit the airwaves. We take an interesting perspective on television shows, providing insight that you won't find elsewhere. Trina's reviews will help you to decide if a show is right for you.</p>
-
-		<h2>Current Show Genre's</h2>
+		<p>Welcome to Trina's Television Show Review page! This page will
+			offer in-depth reviews of some of the hottest shows to hit the
+			airwaves. We take an interesting perspective on television shows,
+			providing insight that you won't find elsewhere. Trina's reviews will
+			help you to decide if a show is right for you.</p>
+		<div class="masks">
+			<p><img class="maskpic" alt="theatremasks" src="/images/Webp.net-resizeimagemasks.jpg" />At vero eos et accusamus et iusto odio dignissimos ducimus qui
+				blanditiis praesentium voluptatum deleniti atque corrupti quos
+				dolores et quas molestias excepturi sint occaecati cupiditate non
+				provident, similique sunt in culpa qui officia deserunt mollitia
+				animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis
+				est et expedita distinctio. Nam libero tempore, cum soluta nobis est
+				eligendi optio cumque nihil impedit quo minus id quod maxime placeat
+				facere possimus, omnis voluptas assumenda est, omnis dolor
+				repellendus. Temporibus autem quibusdam et aut officiis debitis aut
+				rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint
+				et molestiae non recusandae. Itaque earum rerum hic tenetur a
+				sapiente delectus, ut aut reiciendis voluptatibus maiores alias
+				consequatur aut perferendis doloribus asperiores repellat.</p>
+			<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui
+				blanditiis praesentium voluptatum deleniti atque corrupti quos
+				dolores et quas molestias excepturi sint occaecati cupiditate non
+				provident, similique sunt in culpa qui officia deserunt mollitia
+				animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis
+				est et expedita distinctio. Nam libero tempore, cum soluta nobis est
+				eligendi optio cumque nihil impedit quo minus id quod maxime placeat
+				facere possimus, omnis voluptas assumenda est, omnis dolor
+				repellendus. Temporibus autem quibusdam et aut officiis debitis aut
+				rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint
+				et molestiae non recusandae. Itaque earum rerum hic tenetur a
+				sapiente delectus, ut aut reiciendis voluptatibus maiores alias
+				consequatur aut perferendis doloribus asperiores repellat. Temporibus autem quibusdam et aut officiis debitis aut
+				rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint
+				et molestiae non recusandae. Itaque earum rerum hic tenetur a
+				sapiente delectus, ut aut reiciendis voluptatibus maiores alias
+				consequatur aut perferendis doloribus asperiores repellat.</p>
+			<h2>Current Show Genre's</h2>
+		</div>
+		
 		<article class="genreList">
-			<a th:each="currentgenre: ${genreAsCollection}" th:href="@{http://localhost:8080/onegenre/(id=${currentgenre.id})}"><div th:text="${currentgenre.title}" ></div></a>
+			<a th:each="currentgenre: ${genreAsCollection}"
+				th:href="@{http://localhost:8080/onegenre/(id=${currentgenre.id})}"><div
+					th:text="${currentgenre.title}"></div></a>
 		</article>
 	</div>
 	<div class="genreInfo">
-		<p> If you're looking for a laugh, try Comedy!</p>
-		<p>Want a pull on your emotions, try Drama!</p>
-		<p>Want a look into the lives of others, try Reality!</p>
+		<p>If you're looking for a laugh, try Comedy! Admodum eligendi
+			convenire et has, vocibus consequat sea eu. Nam nobis aliquip
+			probatus ad, his harum aperiam instructior ad. Ha mentitum harum.
+			Want a pull on your emotions, try Drama! Comprehensam ad, suas viris
+			clita no has. Cum ne sale nonumes. Tota novum ocurreret no pro, cum
+			eruditi fastidii suavitate id, ex modus timeam qui.</p>
+		<p>Want a look into the lives of others, try Reality! Admodum
+			eligendi convenire et has, vocibus consequat sea eu.</p>
+
 	</div>
 
 
-<footer>
-<p>Trina's Television Reviews</p></footer>
+	<footer>
+		<p>Trina's Television Reviews</p>
+	</footer>
+	
 </body>
 </html>

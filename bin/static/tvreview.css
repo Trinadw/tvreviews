@@ -1,19 +1,54 @@
 article.genreList {
 	display: flex;
-	background-color: white;
 	flex-direction: center;
 	justify-content: space-around;
 	border: solid;
+	background-color: #d6d3ca;
 }
-
-body {
-	background-color: gray;
-}
-
-div.genreInfo {
+article.showList{
 	display: flex;
 	flex-direction: center;
 	justify-content: space-around;
+	
+}
+
+body {
+	/*background-image:
+		url(/images/stock-vector-theatre-concept-comedy-and-drama-masks-word-cloud-193851809.jpg);*/
+	color: black;
+
+}
+div.bottom{
+	background:#aeaeae;
+}
+
+div.genreInfo {
+	column-count: 3;
+	/*display: flex;
+	flex-direction: center;
+	justify-content: space-around;*/
+	column-rule-style: solid;
+	border: solid;
+}
+
+div.genreInfo p {
+	text-align: center;
+}
+
+div.genreone{
+	background:#aeaeae;
+}
+div.singlereview{
+	background:#aeaeae;
+}
+div.main img{
+	display: block;
+    margin: auto;
+	width: 500px;
+	height: 300px;
+	border-radius: 50%;
+	padding: 15px 0px;
+	
 }
 
 footer {
@@ -22,24 +57,27 @@ footer {
 
 h1 {
 	text-align: center;
-	text-color: red;
+	color: red;
 }
 
 header {
-	/*background-image: url("/images/4979045088_29937cdfb1_o-tvwall.jpg");
-	background-size: 6080px 6060px;*/
 	background-repeat: no-repeat;
 	font-family: cursive;
 	font-size: 35px;
 	text-shadow: 3px 2px gray;
 	background-color: #d6d3ca;
-	
+}
+
+img.maskpic{
+	float: left;
 }
 
 img.showpic {
 	border: solid;
 	display: block;
 	margin: 0 auto;
+	max-width: 900px;
+	height: 600px;
 }
 
 img.tvpic {

@@ -1,19 +1,35 @@
 <!DOCTYPE html>
 <html>
+<div class="genreone">
 <head>
 
 <title>Show List</title>
+<link href="/tvreview.css" rel="stylesheet"></link> 
 </head>
+
 <body>
+	<header>
+		<div id="nameHeading">
+			<h1><img class="tvpic" alt="television" src="/images/4567080040_0678bcb9ef_o.jpg"/>Trina's Television Show Reviews<img class="tvpic2" alt="television" src="/images/4567080040_0678bcb9ef_o.jpg"/></h1>
+		</div>
+	</header>
 <div class="main">
-		<h1>Television Shows by Genre</h1>
-<article>
+		<h2>Television Shows by Genre</h2>
+<article class="showList">
 		
 <a th:each="currentOneGenre: ${onegenre.reviews}" 
         th:href="@{http://localhost:8080/onereview/(id=${currentOneGenre.id})}"
         th:text="${currentOneGenre.title}"></a>
     
 			</article>	
+			<img alt="tv" src="/images/Webp.net-resizeimagetv.jpg" />
 			</div>
+			
+			
+			<footer>
+<a class = "backtomain" th:href="@{/genres(title=${genreAsCollection})}">Back to Trina's Television Show Reviews</a>
+
+<p>Trina's Television Reviews</p></footer>
 </body>
+</div>
 </html>
