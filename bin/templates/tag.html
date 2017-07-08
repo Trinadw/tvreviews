@@ -3,9 +3,20 @@
 <head>
 
 <title>Movies by Tag</title>
+<link href="/tvreview.css" rel="stylesheet"></link>
 </head>
 <body>
-<h1>Tags</h1>
+<header>
+<div id="nameHeading">
+				<h1>
+					<img class="tvpic" alt="television"
+						src="/images/4567080040_0678bcb9ef_o.jpg" />Trina's Television
+					Show Reviews<img class="tvpic2" alt="television"
+						src="/images/4567080040_0678bcb9ef_o.jpg" />
+				</h1>
+			</div>
+</header>
+<h2>Movies by Tag</h2>
 
 <form>
 		<ul>
@@ -13,6 +24,12 @@
 			
 		</ul>
 	</form>
+<footer>
+			<a class="backtomain"
+				th:href="@{/genres(title=${genreAsCollection})}">Back to Trina's
+				Television Show Reviews</a>
 
+			<p>Trina's Television Reviews</p>
+		</footer>
 </body>
 </html>

@@ -1,10 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
+
+<title>Tag List</title>
+<link href="/tvreview.css" rel="stylesheet"></link>
 </head>
 <body>
+<header>
+			<div id="nameHeading">
+				<h1>
+					<img class="tvpic" alt="television"
+						src="/images/4567080040_0678bcb9ef_o.jpg" />Trina's Television
+					Show Reviews<img class="tvpic2" alt="television"
+						src="/images/4567080040_0678bcb9ef_o.jpg" />
+				</h1>
+			</div>
+		</header>
 
+		<h2>Tag List</h2>
+<ul>
+			<li th:each="tag: ${tags}"><a th:text="${tag.name}" th:href="@{/tag(id=${tag.id})}"/>
+			</li>
+		</ul>
+		
+		<footer>
+			<a class="backtomain"
+				th:href="@{/genres(title=${genreAsCollection})}">Back to Trina's
+				Television Show Reviews</a>
+
+			<p>Trina's Television Reviews</p>
+		</footer>
 </body>
 </html>

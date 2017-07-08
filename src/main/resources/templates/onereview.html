@@ -29,7 +29,7 @@
 			<li th:text="'Date: ' + ${onereview.date}"></li>
 			<li th:text="'Show Description: ' + ${onereview.synopsis}"></li>
 
-			<li th:each="currentTag: ${onereview.tags}"><a th:text="${currentTag.name}" th:href="@{/tag(id=${currentTag.id})}" />
+			<li th:each="currentTag: ${onereview.tags}"><a th:text="${currentTag.name}" th:href="@{/tags(id=${currentTag.id})}" />
 				<form><button th:formaction="@{/deleteTag}" name="id"
 						th:value="${currentTag.id}">Delete Tag</button></form></li>
 					
