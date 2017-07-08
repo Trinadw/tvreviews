@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+<title>Movies by Tag</title>
+</head>
+<body>
+<h1>Tags</h1>
+
+<form>
+		<ul>
+			<li th:each="currentOneReview: ${tag.reviews}"><span th:text="${currentOneReview.title}"></span></li>
+			
+		</ul>
+	</form>
+
+</body>
+</html>

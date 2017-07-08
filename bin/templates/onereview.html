@@ -1,33 +1,54 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <div class="singlereview">
-<head>
+	<head>
 <link href="/tvreview.css" rel="stylesheet"></link>
-	<title>Show Reviews</title>
-</head>
+<title>Show Reviews</title>
+	</head>
 
-<body>
-<header>
-		<div id="nameHeading">
-			<h1><img class="tvpic" alt="television" src="/images/4567080040_0678bcb9ef_o.jpg"/>Trina's Television Show Reviews<img class="tvpic2" alt="television" src="/images/4567080040_0678bcb9ef_o.jpg"/></h1>
-		</div>
-	</header>
+	<body>
+		<header>
+			<div id="nameHeading">
+				<h1>
+					<img class="tvpic" alt="television"
+						src="/images/4567080040_0678bcb9ef_o.jpg" />Trina's Television
+					Show Reviews<img class="tvpic2" alt="television"
+						src="/images/4567080040_0678bcb9ef_o.jpg" />
+				</h1>
+			</div>
+		</header>
 
-<h2>Trina's Television Reviews</h2>
-<!-- loads the review showing picture and info loaded into the map -->
-<img class= "showpic" th:src="${onereview.imageUrl}"/>
-<p th:text="'ID: ' +${onereview.id}"></p> 
-<p th:text="'Show: ' + ${onereview.title}"></p>
-<p th:text="'Review: ' + ${onereview.content}"></p>
-<p th:text="'Date: ' + ${onereview.date}"></p>
-<p th:text="'Show Description: ' + ${onereview.synopsis}"></p>
+		<h2>Trina's Television Reviews</h2>
+		<!-- loads the review showing picture and info loaded into the map -->
+		<img class="showpic" th:src="${onereview.imageUrl}" />
 
+		<ul class="showInfo">
+			<li th:text="'ID: ' +${onereview.id}"></li>
+			<li th:text="'Show: ' + ${onereview.title}"></li>
+			<li th:text="'Review: ' + ${onereview.content}"></li>
+			<li th:text="'Date: ' + ${onereview.date}"></li>
+			<li th:text="'Show Description: ' + ${onereview.synopsis}"></li>
 
-<footer>
-<a class = "backtomain" th:href="@{/genres(title=${genreAsCollection})}">Back to Trina's Television Show Reviews</a>
+			<li th:each="currentTag: ${onereview.tags}"><a th:text="${currentTag.name}" th:href="@{/tag(id=${currentTag.id})}" />
+				<form><button th:formaction="@{/deleteTag}" name="id"
+						th:value="${currentTag.id}">Delete Tag</button></form></li>
+					
+	
+		</ul>
+		<form method="POST">
+			<input type="hidden" name="id" th:value="${onereview.id}" /> <label>Tag:
+				<input type="text" name="tag" />
+			</label>
+			<button th:formaction="@{/addTag}">Create Tag</button>
+		</form>
+		<footer>
+			<a class="backtomain"
+				th:href="@{/genres(title=${genreAsCollection})}">Back to Trina's
+				Television Show Reviews</a>
 
-<p>Trina's Television Reviews</p></footer>
+			<p>Trina's Television Reviews</p>
+		</footer>
 
-</body>
+	</body>
 </div>
 </html>

@@ -97,3 +97,6 @@ img.tvpic2 {
 	opacity: 0.5;
 	float: right;
 }
+ul.showInfo{
+	list-style-type:none;
+}
