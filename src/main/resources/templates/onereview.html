@@ -21,20 +21,25 @@
 		<h2>Trina's Television Reviews</h2>
 		<!-- loads the review showing picture and info loaded into the map -->
 		<img class="showpic" th:src="${onereview.imageUrl}" />
+		<form>
+			<ul class="showInfo">
+				<li th:text="'ID: ' +${onereview.id}"></li>
+				<li th:text="'Show: ' + ${onereview.title}"></li>
+				<li th:text="'Review: ' + ${onereview.content}"></li>
+				<li th:text="'Date: ' + ${onereview.date}"></li>
+				<li th:text="'Show Description: ' + ${onereview.synopsis}"></li>
+				<div class="tagInfo">
 
-		<ul class="showInfo">
-			<li th:text="'ID: ' +${onereview.id}"></li>
-			<li th:text="'Show: ' + ${onereview.title}"></li>
-			<li th:text="'Review: ' + ${onereview.content}"></li>
-			<li th:text="'Date: ' + ${onereview.date}"></li>
-			<li th:text="'Show Description: ' + ${onereview.synopsis}"></li>
+					<li th:each="currentTag: ${onereview.tags}"><a
+						th:text="${currentTag.name}"
+						th:href="@{/tags(id=${currentTag.id})}" />
+						<button th:formaction="@{/deleteTag}" name="id"
+							th:value="${currentTag.id}">Delete Tag</button></li>
+				</div>
 
-			<li th:each="currentTag: ${onereview.tags}"><a th:text="${currentTag.name}" th:href="@{/tags(id=${currentTag.id})}" />
-				<form><button th:formaction="@{/deleteTag}" name="id"
-						th:value="${currentTag.id}">Delete Tag</button></form></li>
-					
-	
-		</ul>
+
+			</ul>
+		</form>
 		<form method="POST">
 			<input type="hidden" name="id" th:value="${onereview.id}" /> <label>Tag:
 				<input type="text" name="tag" />

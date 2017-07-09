@@ -6,6 +6,7 @@
 <link href="/tvreview.css" rel="stylesheet"></link>
 </head>
 <body>
+<div class="tagbody">
 <header>
 			<div id="nameHeading">
 				<h1>
@@ -18,7 +19,7 @@
 		</header>
 
 		<h2>Tag List</h2>
-<ul>
+<ul class="tagList">
 			<li th:each="tag: ${tags}"><a th:text="${tag.name}" th:href="@{/tag(id=${tag.id})}"/>
 			</li>
 		</ul>
@@ -30,5 +31,6 @@
 
 			<p>Trina's Television Reviews</p>
 		</footer>
+		</div>
 </body>
 </html>

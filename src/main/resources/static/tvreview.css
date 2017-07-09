@@ -13,7 +13,7 @@ article.showList{
 }
 
 body {
-	
+	list-style-type:none;
 	color: black;
 	
 
@@ -51,7 +51,18 @@ div.main img{
 	padding: 15px 0px;
 	
 }
+div.tagbody{
+	background:#aeaeae;
+}
 
+div.tagbody2{
+	background:#aeaeae;
+}
+*div.tagInfo{
+	display: flex;
+	flex-direction: center;
+	justify-content: space-around;
+}
 footer {
 	text-align: center;
 }
@@ -98,5 +109,8 @@ img.tvpic2 {
 	float: right;
 }
 ul.showInfo{
+	list-style-type:none;
+}
+ul.tagList{
 	list-style-type:none;
 }

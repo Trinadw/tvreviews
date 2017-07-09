@@ -6,6 +6,7 @@
 <link href="/tvreview.css" rel="stylesheet"></link>
 </head>
 <body>
+<div class="tagbody2">
 <header>
 <div id="nameHeading">
 				<h1>
@@ -19,7 +20,7 @@
 <h2>Movies by Tag</h2>
 
 <form>
-		<ul>
+		<ul class="tagList">
 			<li th:each="currentOneReview: ${tag.reviews}"><span th:text="${currentOneReview.title}"></span></li>
 			
 		</ul>
@@ -31,5 +32,6 @@
 
 			<p>Trina's Television Reviews</p>
 		</footer>
+		</div>
 </body>
 </html>
