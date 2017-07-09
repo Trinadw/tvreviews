@@ -23,7 +23,12 @@
 			<li th:each="tag: ${tags}"><a th:text="${tag.name}" th:href="@{/tag(id=${tag.id})}"/>
 			</li>
 		</ul>
-		
+		<h3>Tag Cloud</h3>
+<div id="tagcloud">
+    <a href="#" th:each="tag : ${tagCloud}" th:rel="${tag.value}" th:text="${tag.key} + ' '"
+       th:href="@{'/tag/' + ${tag.key}}" >tag</a>
+    <br/>
+</div>
 		<footer>
 			<a class="backtomain"
 				th:href="@{/genres(title=${genreAsCollection})}">Back to Trina's
