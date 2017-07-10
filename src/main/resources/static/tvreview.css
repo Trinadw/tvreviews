@@ -23,6 +23,26 @@ div.bottom{
 	background:#aeaeae;
 	border-top-style:dotted;
 }
+div.gallery {
+    margin: 5px;
+    
+    display:inline-block;
+    width: 180px;
+    background:#aeaeae;
+    padding-left: 6cm;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width:180px;
+ 
+    height: auto;
+    
+
+}
 div.genreInfo {
 	column-count: 3;
 	/*display: flex;
@@ -113,4 +133,8 @@ ul.showInfo{
 }
 ul.tagList{
 	list-style-type:none;
+}
+ul.moviesByTag{
+	font-size: 26px;
+	list-style-type: none;
 }
