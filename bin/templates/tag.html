@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+<title>Movies by Tag</title>
+<link href="/tvreview.css" rel="stylesheet"></link>
+</head>
+<body>
+<div class="tagbody2">
+<header>
+<div id="nameHeading">
+				<h1>
+					<img class="tvpic" alt="television"
+						src="/images/4567080040_0678bcb9ef_o.jpg" />Trina's Television
+					Show Reviews<img class="tvpic2" alt="television"
+						src="/images/4567080040_0678bcb9ef_o.jpg" />
+				</h1>
+			</div>
+</header>
+<h2>Movies by Tag</h2>
+
+
+		<ul class="moviesByTag">
+			<li th:each="currentOneReview: ${tag.reviews}"><span th:text="${currentOneReview.title}"></span></li>
+			
+		</ul>
+	<p>Years ago, before the "interweb" as my mother likes to call it, we had these handy dandy guides to let us know about what was coming on television.</p>
+		<div class="gallery">
+  <a target="_blank" href="/images/Webp.net-resizeimagetvguide.jpg">
+    <img src="/images/Webp.net-resizeimagesmalltvguide.jpg" alt="tvguide" width="150" height="200"></img>
+  </a>
+ </div>
+ <div class="gallery">
+  <a target="_blank" href="/images/4170806345_5b02dac990_o.jpg">
+    <img src="/images/Webp.net-resizeimage.xmastvguidejpg.jpg" alt="xmastvguide" width="150" height="200"></img>
+  </a>
+ </div>
+ 
+ <div class="gallery">
+  <a target="_blank" href="/images/4822479044_e6eb9177b9_o.jpg">
+    <img src="/images/Webp.net-resizeimage.madgetvguidejpg.jpg" alt="madonnatvguide" width="150" height="200"></img>
+  </a>
+ </div>
+ <p>We didn't have digital tags, but you could flip through a TV guide and get an array of information regarding upcoming shows. Alas, the rise of the digital age made these little publications obsolete. Now, we Google and tag.</p>
+<footer>
+			<a class="backtomain"
+				th:href="@{/genres(title=${genreAsCollection})}">Back to Trina's
+				Television Show Reviews</a>
+
+			<p>Trina's Television Reviews</p>
+		</footer>
+		</div>
+</body>
+</html>

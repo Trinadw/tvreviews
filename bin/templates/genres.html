@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+<title>Genre</title>
+<link href="/tvreview.css" rel="stylesheet"></link>
+</head>
+<body>
+	<header>
+		<div id="nameHeading">
+			<h1>
+				<img class="tvpic" alt="television"
+					src="/images/4567080040_0678bcb9ef_o.jpg" />Trina's Television
+				Show Reviews<img class="tvpic2" alt="television"
+					src="/images/4567080040_0678bcb9ef_o.jpg" />
+			</h1>
+		</div>
+	</header>
+
+	<div class="mainclass">
+		<p>Welcome to Trina's Television Show Review page! This page will
+			offer in-depth reviews of some of the hottest shows to hit the
+			airwaves. We take an interesting perspective on television shows,
+			providing insight that you won't find elsewhere. Trina's reviews will
+			help you to decide if a show is right for you.</p>
+		<div class="masks">
+			<p>
+				<img class="maskpic" alt="theatremasks"
+					src="/images/Webp.net-resizeimagemasks.jpg" />At vero eos et
+				accusamus et iusto odio dignissimos ducimus qui blanditiis
+				praesentium voluptatum deleniti atque corrupti quos dolores et quas
+				molestias excepturi sint occaecati cupiditate non provident,
+				similique sunt in culpa qui officia deserunt mollitia animi, id est
+				laborum et dolorum fuga. Et harum quidem rerum facilis est et
+				expedita distinctio. Nam libero tempore, cum soluta nobis est
+				eligendi optio cumque nihil impedit quo minus id quod maxime placeat
+				facere possimus, omnis voluptas assumenda est, omnis dolor
+				repellendus. Temporibus autem quibusdam et aut officiis debitis aut
+				rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint
+				et molestiae non recusandae. Itaque earum rerum hic tenetur a
+				sapiente delectus, ut aut reiciendis voluptatibus maiores alias
+				consequatur aut perferendis doloribus asperiores repellat.
+			</p>
+			<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui
+				blanditiis praesentium voluptatum deleniti atque corrupti quos
+				dolores et quas molestias excepturi sint occaecati cupiditate non
+				provident, similique sunt in culpa qui officia deserunt mollitia
+				animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis
+				est et expedita distinctio. Nam libero tempore, cum soluta nobis est
+				eligendi optio cumque nihil impedit quo minus id quod maxime placeat
+				facere possimus, omnis voluptas assumenda est, omnis dolor
+				repellendus. Temporibus autem quibusdam et aut officiis debitis aut
+				rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint
+				et molestiae non recusandae. Itaque earum rerum hic tenetur a
+				sapiente delectus, ut aut reiciendis voluptatibus maiores alias
+				consequatur aut perferendis doloribus asperiores repellat.
+				Temporibus autem quibusdam et aut officiis debitis aut rerum
+				necessitatibus saepe eveniet ut et voluptates repudiandae sint et
+				molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente
+				delectus, ut aut reiciendis voluptatibus maiores alias consequatur
+				aut perferendis doloribus asperiores repellat.</p>
+		</div>
+		
+		<div class="bottom">
+			<h2>Current Show Genre's</h2>
+
+
+			<article class="genreList">
+				<a th:each="currentgenre: ${genreAsCollection}"
+					th:href="@{http://localhost:8080/onegenre/(id=${currentgenre.id})}"><div
+						th:text="${currentgenre.title}"></div></a>
+			</article>
+		
+		<div class="genreInfo">
+			<p>If you're looking for a laugh, try Comedy! Admodum eligendi
+				convenire et has, vocibus consequat sea eu. Nam nobis aliquip
+				probatus ad, his harum aperiam instructior ad. Ha mentitum harum. 
+				Want a pull on your emotions, try Drama! Comprehensam ad, suas viris
+				clita no has. Cum ne sale nonumes. Tota novum ocurreret no pro, cum
+				eruditi fastidii suavitate id, ex modus timeam qui.</p>
+			<p>Want a look into the lives of others, try Reality! Admodum
+				eligendi convenire et has, vocibus consequat sea eu. Comprehensam ad, suas viris
+				clita no has. Cum ne sale nonumes.</p>
+
+		</div>
+
+			<footer>
+				<p>Trina's Television Reviews</p>
+			</footer>
+		
+	</div>
+	</div>
+</body>
+</html>

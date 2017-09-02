@@ -1,0 +1,140 @@
+article.genreList {
+	display: flex;
+	flex-direction: center;
+	justify-content: space-around;
+	border: solid;
+	background-color: #d6d3ca;
+}
+article.showList{
+	display: flex;
+	flex-direction: center;
+	justify-content: space-around;
+	
+}
+
+body {
+	list-style-type:none;
+	color: black;
+	
+
+}
+
+div.bottom{
+	background:#aeaeae;
+	border-top-style:dotted;
+}
+div.gallery {
+    margin: 5px;
+    
+    display:inline-block;
+    width: 180px;
+    background:#aeaeae;
+    padding-left: 6cm;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width:180px;
+ 
+    height: auto;
+    
+
+}
+div.genreInfo {
+	column-count: 3;
+	/*display: flex;
+	flex-direction: center;
+	justify-content: space-around;*/
+	column-rule-style: solid;
+	border: solid;
+}
+
+div.genreInfo p {
+	text-align: center;
+}
+
+div.genreone{
+	background:#aeaeae;
+}
+div.singlereview{
+	background:#aeaeae;
+}
+div.main img{
+	display: block;
+    margin: auto;
+	width: 500px;
+	height: 300px;
+	
+	padding: 15px 0px;
+	
+}
+div.tagbody{
+	background:#aeaeae;
+}
+
+div.tagbody2{
+	background:#aeaeae;
+}
+*div.tagInfo{
+	display: flex;
+	flex-direction: center;
+	justify-content: space-around;
+}
+footer {
+	text-align: center;
+}
+
+h1 {
+	text-align: center;
+	color: red;
+}
+
+header {
+	background-repeat: no-repeat;
+	font-family: cursive;
+	font-size: 35px;
+	text-shadow: 3px 2px gray;
+	background-color: #d6d3ca;
+
+}
+
+img.maskpic{
+	float: left;
+	padding: 10px;
+}
+
+img.showpic {
+	border: solid;
+	border-color:red;
+	display: block;
+	margin: 0 auto;
+	max-width: 900px;
+	height: 600px;
+}
+
+img.tvpic {
+	max-width: 100px;
+	height: 97px;
+	opacity: 0.5;
+	float: left;
+}
+
+img.tvpic2 {
+	max-width: 100px;
+	height: 97px;
+	opacity: 0.5;
+	float: right;
+}
+ul.showInfo{
+	list-style-type:none;
+}
+ul.tagList{
+	list-style-type:none;
+}
+ul.moviesByTag{
+	font-size: 26px;
+	list-style-type: none;
+}

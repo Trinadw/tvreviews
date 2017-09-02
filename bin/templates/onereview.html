@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<div class="singlereview">
+	<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+<link href="/tvreview.css" rel="stylesheet"></link>
+<title>Show Reviews</title>
+	</head>
+
+	<body>
+		<header>
+			<div id="nameHeading">
+				<h1>
+					<img class="tvpic" alt="television"
+						src="/images/4567080040_0678bcb9ef_o.jpg" />Trina's Television
+					Show Reviews<img class="tvpic2" alt="television"
+						src="/images/4567080040_0678bcb9ef_o.jpg" />
+				</h1>
+			</div>
+		</header>
+
+		<h2>Trina's Television Reviews</h2>
+		<!-- loads the review showing picture and info loaded into the map -->
+		<img class="showpic" th:src="${onereview.imageUrl}" />
+		<form>
+			<ul class="showInfo">
+				<li th:text="'ID: ' +${onereview.id}"></li>
+				<hr></hr>
+				<li th:text="'Show: ' + ${onereview.title}"></li>
+				<hr></hr>
+				<li th:text="'Review: ' + ${onereview.content}"></li>
+				<hr></hr>
+				<li th:text="'Date: ' + ${onereview.date}"></li>
+				<hr></hr>
+				<li th:text="'Show Description: ' + ${onereview.synopsis}"></li>
+				<br></br>
+				<div class="tagInfo">
+
+					<li th:each="currentTag: ${onereview.tags}"><a
+						th:text="${currentTag.name}"
+						th:href="@{/tags(id=${currentTag.id})}" />
+						<button th:formaction="@{/deleteTag}" name="id"
+							th:value="${currentTag.id}">Delete Tag</button></li>
+				</div>
+
+
+			</ul>
+		</form>
+		<form method="POST">
+			<input type="hidden" name="id" th:value="${onereview.id}" /> <label>Tag:
+				<input type="text" name="tag" />
+			</label>
+			<button th:formaction="@{/addTag}">Create Tag</button>
+		</form>
+		<footer>
+			<a class="backtomain"
+				th:href="@{/genres(title=${genreAsCollection})}">Back to Trina's
+				Television Show Reviews</a>
+
+			<p>Trina's Television Reviews</p>
+		</footer>
+
+	</body>
+</div>
+</html>
